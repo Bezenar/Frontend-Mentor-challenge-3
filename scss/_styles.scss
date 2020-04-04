@@ -1,0 +1,138 @@
+section {
+  background-color: $violet;
+  background-image: url(../images/bg-desktop.svg);
+  position: relative;
+  @include resp("s") {
+    background-image: url(../images/bg-mobile.svg);
+    background-repeat: no-repeat;
+  }
+  .leftSide {
+    .logo {
+      margin: 3.2rem -0.1rem;
+      @include resp("s") {
+        margin: 2rem 0.9rem;
+      }
+      img {
+        width: 13.3rem;
+        @include resp("s") {
+          width: 8rem;
+        }
+      }
+    }
+    .mockups {
+      margin: 5.23rem 0.1rem 6rem;
+      @include resp("s") {
+        padding: 1.5rem 0 0 1.15rem;
+        margin: 0;
+      }
+      img {
+        width: 44.3rem;
+        @include resp("s") {
+          width: 18.9rem;
+        }
+      }
+    }
+  }
+  .rightSide {
+    .content {
+      padding: 14.9rem 0 0 7.55rem;
+      color: white;
+      @include resp("s") {
+        padding: 3.5rem 1rem 0 1rem;
+        text-align: center;
+      }
+      .heading-l {
+        font-size: 39px;
+        line-height: 60px;
+        padding-bottom: 1.2rem;
+        @include resp("s") {
+          font-size: 22px;
+          line-height: 35px;
+          padding-bottom: 0.8rem;
+        }
+        p {
+          letter-spacing: 1px;
+        }
+      }
+      .text {
+        font-family: $secondFont;
+        line-height: 27px;
+        font-size: 17px;
+        padding: 0 0 1.4rem 0.1rem;
+        letter-spacing: 0.5px;
+        @include resp("s") {
+          font-size: 15px;
+          line-height: 24px;
+          padding-bottom: 1.55rem;
+        }
+      }
+      .button-container {
+        @include resp("s") {
+          padding-bottom: 4rem;
+        }
+        .button {
+          font-size: 14px;
+          padding: 1.07rem 4.16rem;
+          margin-left: 2px;
+          color: $violet;
+          cursor: pointer;
+          @include resp("s") {
+            padding: 0.73rem 4.7rem;
+            margin-left: 6px;
+          }
+          &__rounded {
+            border-radius: 2rem;
+          }
+          &:hover {
+            transition: all 0.5s ease-in;
+            border: 1px solid white;
+            color: white;
+            background-color: lighten($color: $violet, $amount: 10);
+          }
+        }
+      }
+    }
+    .social-icons {
+      position: absolute;
+      right: 4rem;
+      bottom: 2rem;
+      z-index: 2;
+      @include resp("s") {
+        position: static;
+        padding-bottom: 1rem;
+      }
+      a {
+        padding-left: 0.9rem;
+        @include resp("s") {
+          padding-left: 0.4rem;
+        }
+        .icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          &:hover {
+            transform: scale(1.1);
+            transition: all 0.5 ease-in-out;
+          }
+          @include resp("s") {
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  background-color: $violet;
+  padding: 1rem 0;
+}
+//_____________________
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: white;
+  text-decoration: underline;
+}
